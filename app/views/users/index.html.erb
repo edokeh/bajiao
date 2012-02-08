@@ -1,0 +1,31 @@
+<h1>Listing users</h1>
+<table>
+  <tr>
+    <th>Cnname</th>
+    <th>Workno</th>
+    <th>Email</th>
+    <th>duty</th>
+    <th>py</th>
+    <th>dept</th>
+    <th>quit</th>
+    <th>re_cr</th>
+    <th>cre</th>
+    <th>upd</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.cnname %></td>
+    <td><%= user.workno %></td>
+    <td><%= user.email %></td>
+    <td><%= user.duty %></td>
+    <td><%= user.py %></td>
+    <td><%= user.dept %></td>
+    <td><%= user.quit %></td>
+    <td><%= user.re_created_at %></td>
+    <td><%= user.created_at %></td>
+    <td><%= user.updated_at %></td>
+    <td><%= link_to 'Show', user %></td>
+  </tr>
+<% end %>
+</table>

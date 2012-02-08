@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: \5FAE\8F6F\96C5\9ED1, \9ED1\4F53, \6587\6CC9\9A7F\6B63\9ED1\4F53, \534E\6587\7EC6\9ED1, verdana, arial, helvetica, sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+}
+
+.main {
+    overflow: hidden;
+    width: 100%;
+}
+
+.wrapper {
+    -webkit-transition: -webkit-transform 500ms ease;
+    overflow: hidden;
+}
+
+.panel {
+    width: 100%;
+    overflow: hidden;
+    float: left;
+}
+
+.toolbar {
+    display: -webkit-box;
+    height: 45px;
+    width: 100%;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#B0BCCD), to(#6D84A2));
+    -webkit-box-shadow: 0 2px 4px #000;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.toolbar h2 {
+    -webkit-box-flex: 1;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    color: white;
+    font-size: 18px;
+    line-height: 45px;
+    font-weight: bold;
+    text-shadow: 1px 2px 0 #555;
+}
+
+.tip {
+    display: -webkit-box;
+    padding: 10px 0;
+    background-color: #eee;
+}
+
+.createEntity {
+    -webkit-box-flex: 1;
+    display: block;
+    margin: 0 5px;
+    height: 50px;
+    color: white;
+    text-shadow: 1px 2px 0 #555;
+    font-weight: bold;
+    border-radius: 25px;
+    line-height: 48px;
+    text-align: center;
+    position: relative;
+}
+
+.createEntity span {
+    display: none;
+    width: 100%;
+    position: absolute;
+    height: 50px;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+}
+
+.createIncoming {
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#b4cb4d), to(#7f9e2f));
+}
+
+.createCost {
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#58b4e9), to(#3d8eb8));
+}
+
+.list {
+    -webkit-user-select: none;
+    width: 100%;
+}
+
+.list .item {
+    border-bottom: 1px solid #eee;
+    height: 60px;
+    display: -webkit-box;
+}
+
+.list .touched {
+    background-color: #0277f0;
+}
+
+.list .itemLeft {
+    -webkit-box-flex: 1;
+    line-height: 60px;
+    padding-left: 10px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.list .itemRight {
+    width: 150px;
+    text-align: right;
+    padding: 10px 30px 10px 0;
+    background: url("/images/listArrow.png") no-repeat center right;
+}
+
+.cost {
+    color: #2470d8;
+    font-weight: bold;
+}
+
+.incoming {
+    color: #7f9e2f;
+    font-weight: bold;
+}
+
+div.button {
+    text-align: center;
+    position: relative;
+    margin: 8px 12px 0 12px;
+    height: 26px;
+    width: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    -webkit-border-radius: 5px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9fb3cc), to(#5b80ab), color-stop(0.5, #6b8bb2), color-stop(0.51, #597eaa));
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25), inset 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+div.button div {
+    position: absolute;
+    z-index: 1;
+    top: 4px;
+    left: -7px;
+    -webkit-transform: rotate(51deg);
+}
+
+div.button span {
+    -webkit-transform: skew(15deg);
+    display: block;
+    width: 15px;
+    height: 16px;
+    background: -webkit-gradient(linear, left top, right bottom, from(#9fb3cc), to(#5b80ab), color-stop(0.5, #6b8bb2), color-stop(0.51, #597eaa));
+    -webkit-border-radius: 1px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-right: 0;
+    border-top: 0;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+div.button p {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    line-height: 26px;
+    height: 26px;
+}
+
+.formRow {
+    display: -webkit-box;
+    width: 100%;
+}
+
+.formRow .label {
+    width: 70px;
+    border-right: 1px solid #ACC1A9;
+    border-bottom: 1px solid #ACC1A9;
+    padding: 5px 10px;
+    text-align: right;
+    font-size: 18px;
+}
+
+.formRow .field {
+    -webkit-box-flex: 1;
+    border-bottom: 1px solid #ACC1A9;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.formRow .touched {
+    background-color: #A5BFD7;
+}
+
+.formRow textarea {
+    -webkit-box-flex: 1;
+    display: block;
+    margin: 5px 5px;
+    height: 40px;
+    border: 1px solid #aaa;
+    -webkit-user-select: text;
+}
+
+#ime {
+    width: 100%;
+}
+
+.numberIme table {
+    -webkit-user-select: none;
+    width: 100%;
+    word-break: break-all;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.numberIme td {
+    color: white;
+    background: -webkit-gradient(linear, left top, left bottom, from(#6D7482), to(#4E5564));
+    font-family: arial;
+    font-size: 28px;
+    font-weight: bold;
+    height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid #9398A3;
+}
+
+.numberIme td.white {
+    color: #4E5564;
+    background: -webkit-gradient(linear, left top, left bottom, from(#DEDFE2), to(#B5B9C0));
+}
+
+.selectIme {
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, from(#A2A3AA), to(#272937));
+    height: 200px;
+    border-top: 1px solid #ccc;
+    display: -webkit-box;
+}
+
+.selectImeBody {
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0, #bbbbbb), color-stop(0.33, #ffffff), color-stop(0.66, #ffffff), color-stop(1, #bbbbbb));
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+    border-radius: 5px;
+    height: 180px;
+    position: relative;
+    margin: 10px 5px;
+}
+
+.selectedBar {
+    background-color: rgba(13, 117, 242, 0.3);
+    border-bottom: 2px solid #06346A;
+    border-top: 2px solid #06346A;
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    top: 60px;
+}
+
+.selectWrapper {
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+    border-right: 1px solid #999;
+    -webkit-box-flex: 1;
+}
+
+.selectWrapper:last-of-type {
+    border-right: none;
+}
+
+.selectScroller {
+    position: absolute;
+    width: 100%;
+}
+
+.selectScroller div {
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 60px;
+    text-align: center;
+}
+

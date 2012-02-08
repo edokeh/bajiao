@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  data: 
+  user_id: 1
+
+two:
+  data: 
+  user_id: 1

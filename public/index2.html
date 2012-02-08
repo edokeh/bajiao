@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Ruby on Rails: Welcome aboard</title>
+</head>
+<body>
+<div id="pos">xx</div>
+<script type="text/javascript">
+    function supports_geolocation() {
+        return !!navigator.geolocation;
+    }
+
+    function get_location() {
+        if (supports_geolocation()) {
+            alert("ok");
+            navigator.geolocation.getCurrentPosition(showMap, function() {
+                alert("error");
+            });
+        } else {
+            // no native support;
+            alert('您的浏览器不支持HTML5 geolocation功能!');
+        }
+    }
+    function showMap(position) {
+        alert("x");
+        var pos = document.getElementById("pos");
+        pos.innerHTML = position.coords.latitude + "," + position.coords.longitude;
+    }
+
+    get_location();
+</script>
+</body>
+</html>

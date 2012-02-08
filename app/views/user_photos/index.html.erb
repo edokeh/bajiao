@@ -1,0 +1,14 @@
+<h1>Listing user photos</h1>
+<table>
+  <tr>
+    <th>workno</th>
+    <th>photo</th>
+  </tr>
+
+<% @photos.each do |photo| %>
+  <tr>
+    <td><%= photo.workno %></td>
+    <td><img src="<%= user_photo_path(photo) %>" /></td>
+  </tr>
+<% end %>
+</table>

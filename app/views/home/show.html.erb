@@ -1,0 +1,16 @@
+<div id="wrapper">
+  <%= render 'list' %>
+</div>
+<%= render 'progress' %>
+<%= render 'about' %>
+<div style="display:none">
+  <%= render 'detail' %>
+</div>
+<%= javascript_include_tag "sea" %>
+<%= javascript_include_tag "zepto/zepto", "zepto/event", "zepto/touch", "zepto/ajax", "iscroll" %>
+<script>
+seajs.use("home/show");
+</script>
+<script>
+var nowVersion = <%=Version.last.time.to_i %>;
+</script>
